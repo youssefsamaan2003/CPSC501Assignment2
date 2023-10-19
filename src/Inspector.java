@@ -47,5 +47,26 @@ public class Inspector {
             }
         }
 
+        // 6. The fields the class declares
+        Field[] fields = clazz.getDeclaredFields();
+        if (fields.length > 0) {
+            System.out.println("Declared Fields:");
+            for (Field field : fields) {
+                System.out.println("Name: " + field.getName());
+                System.out.println("Type: " + field.getType().getName());
+                System.out.println("Modifiers: " + Modifier.toString(field.getModifiers()));
+
+                if (!recursive || !field.getType().isPrimitive()) {
+                    try {
+                        field.setAccessible(true);
+                        System.out.println("Value: " + field.get(obj));
+                    } catch (IllegalAccessException e) {
+                        e.printStackTrace();
+                    }
+                }
+                System.out.println();
+            }
+        }
+
     }
 }

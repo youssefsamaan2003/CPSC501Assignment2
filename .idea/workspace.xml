@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85db8f0c-c988-4c7c-a441-2ba368fad57a" name="Changes" comment="completed the 3rd requirement: the name of the interfasces that the class would implement">
+    <list default="true" id="85db8f0c-c988-4c7c-a441-2ba368fad57a" name="Changes" comment="completed 5th requirement, which is defining the constructors declares.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Inspector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Inspector.java" afterDir="false" />
     </list>
@@ -58,7 +58,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697729307633</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="completed 5th requirement, which is defining the constructors declares.">
+      <created>1697742466983</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697742466983</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -76,6 +83,7 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="completed the first two requirements, the name of the declaring class and the name of the immediate superclass" />
     <MESSAGE value="completed the 3rd requirement: the name of the interfasces that the class would implement" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed the 3rd requirement: the name of the interfasces that the class would implement" />
+    <MESSAGE value="completed 5th requirement, which is defining the constructors declares." />
+    <option name="LAST_COMMIT_MESSAGE" value="completed 5th requirement, which is defining the constructors declares." />
   </component>
 </project>
