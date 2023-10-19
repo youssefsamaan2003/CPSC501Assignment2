@@ -23,5 +23,29 @@ public class Inspector {
             }
         }
 
+        // 4. The methods the class declares
+        Method[] methods = clazz.getDeclaredMethods();
+        if (methods.length > 0) {
+            System.out.println("Declared Methods:");
+            for (Method method : methods) {
+                System.out.println("Name: " + method.getName());
+                System.out.println("Return Type: " + method.getReturnType().getName());
+                System.out.println("Modifiers: " + Modifier.toString(method.getModifiers()));
+                System.out.println("Parameter Types: " + Arrays.toString(method.getParameterTypes()));
+                System.out.println("Exceptions Thrown: " + Arrays.toString(method.getExceptionTypes()));
+                System.out.println();
+            }
+        }
+
+        // 5. The constructors the class declares
+        Constructor<?>[] constructors = clazz.getDeclaredConstructors();
+        if (constructors.length > 0) {
+            System.out.println("Declared Constructors:");
+            for (Constructor<?> constructor : constructors) {
+                System.out.println("Parameter Types: " + Arrays.toString(constructor.getParameterTypes()));
+                System.out.println("Modifiers: " + Modifier.toString(constructor.getModifiers()));
+            }
+        }
+
     }
 }
