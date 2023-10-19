@@ -13,5 +13,15 @@ public class Inspector {
         if (superClass != null) {
             System.out.println("Immediate Superclass: " + superClass.getName());
         }
+
+        // 3. The name of the interfaces the class implements
+        Class<?>[] interfaces = clazz.getInterfaces();
+        if (interfaces.length > 0) {
+            System.out.println("Implemented Interfaces:");
+            for (Class<?> intf : interfaces) {
+                System.out.println(intf.getName());
+            }
+        }
+
     }
 }
