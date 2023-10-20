@@ -56,17 +56,7 @@ public class Inspector {
                 System.out.println("Type: " + field.getType().getName());
                 System.out.println("Modifiers: " + Modifier.toString(field.getModifiers()));
 
-//                if (!recursive || !field.getType().isPrimitive()) {
-//                    try {
-//                        field.setAccessible(true);
-//                        System.out.println("Value: " + field.get(obj));
-//                    } catch (IllegalAccessException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//                System.out.println();
 
-                // Check if the field is an object and if recursive is set to true
                 if (recursive && !field.getType().isPrimitive()) {
                     try {
                         field.setAccessible(true);
