@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85db8f0c-c988-4c7c-a441-2ba368fad57a" name="Changes" comment="added handling arrays">
+    <list default="true" id="85db8f0c-c988-4c7c-a441-2ba368fad57a" name="Changes" comment="refactored clazz to objClass">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InspectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InspectorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.InspectorTest">
     <configuration name="InspectorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CPSC501Assignment2" />
       <option name="PACKAGE_NAME" value="" />
@@ -59,9 +60,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="InspectorTest.testInspectRecursive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CPSC501Assignment2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="InspectorTest" />
+      <option name="METHOD_NAME" value="testInspectRecursive" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.InspectorTest" />
+        <item itemvalue="JUnit.InspectorTest.testInspectRecursive" />
       </list>
     </recent_temporary>
   </component>
@@ -130,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697823275063</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="refactored clazz to objClass">
+      <created>1697824378461</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1697824378461</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,6 +173,7 @@
     <MESSAGE value="created tests - testInspectComplexObject(), testInspectRecursive(), testInspectSimpleObject()" />
     <MESSAGE value="updated the recursive part" />
     <MESSAGE value="added handling arrays" />
-    <option name="LAST_COMMIT_MESSAGE" value="added handling arrays" />
+    <MESSAGE value="refactored clazz to objClass" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored clazz to objClass" />
   </component>
 </project>

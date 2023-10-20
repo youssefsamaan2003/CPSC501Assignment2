@@ -1,60 +1,100 @@
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import java.util.ArrayList;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.time.DayOfWeek;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import static org.junit.Assert.*;
 
 public class InspectorTest {
-    private Inspector inspector;
-
-    @BeforeEach
-    public void setUp() {
-        inspector = new Inspector();
-    }
 
     @Test
-    public void testInspectSimpleObject() {
-        SimpleObject simpleObject = new SimpleObject();
-        inspector.inspect(simpleObject, false);
-        // TODO: You can add assertions here to check the printed output.
-    }
+    public void testInspectPrimitiveTypes() {
+        int primitiveInt = 42;
+        double primitiveDouble = 3.14;
+        String primitiveString = "Hello";
+        boolean primitiveBoolean = true;
+        char primitiveChar = 'A';
 
-    @Test
-    public void testInspectComplexObject() {
-        ComplexObject complexObject = new ComplexObject();
-        inspector.inspect(complexObject, false);
-        // TODO: You can add assertions here to check the printed output.
-    }
+        Inspector inspector = new Inspector();
 
-    @Test
-    public void testInspectRecursive() {
-        ComplexObject complexObject = new ComplexObject();
-        inspector.inspect(complexObject, true);
-        // TODO: You can add assertions here to check the printed output.
-    }
-
-    // Define test classes for your objects
-    private static class SimpleObject {
-        private int intValue;
-        private String stringValue;
-
-        public SimpleObject() {
-            intValue = 42;
-            stringValue = "Hello, World!";
+        try {
+            inspector.inspect(primitiveInt, true);
+            inspector.inspect(primitiveDouble, true);
+            inspector.inspect(primitiveString, true);
+            inspector.inspect(primitiveBoolean, true);
+            inspector.inspect(primitiveChar, true);
+        } catch (Exception e) {
+            fail("Exception thrown during inspection: " + e.getMessage());
         }
+
+        // Add specific assertions for the primitive values
+        assertEquals("int", inspector.getClass().getName());
+        assertEquals("double", inspector.getClass().getName());
+        assertEquals("java.lang.String", inspector.getClass().getName());
+        assertEquals("boolean", inspector.getClass().getName());
+        assertEquals("char", inspector.getClass().getName());
     }
 
-    private static class ComplexObject {
-        private int intValue;
-        private String stringValue;
-        private ArrayList<String> stringList;
+    @Test
+    public void testInspectArray() {
+        int[] intArray = { 1, 2, 3, 4, 5 };
+        String[] stringArray = { "One", "Two", "Three" };
 
-        public ComplexObject() {
-            intValue = 42;
-            stringValue = "Hello, World!";
-            stringList = new ArrayList<>();
-            stringList.add("One");
-            stringList.add("Two");
+        Inspector inspector = new Inspector();
+
+        try {
+            inspector.inspect(intArray, true);
+            inspector.inspect(stringArray, true);
+        } catch (Exception e) {
+            fail("Exception thrown during inspection: " + e.getMessage());
         }
+
+        // Add specific assertions for the array values
+        assertEquals("[I", inspector.getClass().getName()); // int array
+        assertEquals("[Ljava.lang.String;", inspector.getClass().getName()); // String array
+    }
+
+    @Test
+    public void testInspectCollections() {
+        List<String> stringList = new ArrayList<>();
+        stringList.add("One");
+        stringList.add("Two");
+        stringList.add("Three");
+
+        Map<Integer, String> map = new HashMap<>();
+        map.put(1, "One");
+        map.put(2, "Two");
+        map.put(3, "Three");
+
+        Inspector inspector = new Inspector();
+
+        try {
+            inspector.inspect(stringList, true);
+            inspector.inspect(map, true);
+        } catch (Exception e) {
+            fail("Exception thrown during inspection: " + e.getMessage());
+        }
+
+        // Add specific assertions for the collections
+        assertEquals("java.util.ArrayList", inspector.getClass().getName()); // ArrayList
+        assertEquals("java.util.HashMap", inspector.getClass().getName()); // HashMap
+    }
+
+    @Test
+    public void testInspectEnum() {
+        DayOfWeek dayOfWeek = DayOfWeek.MONDAY;
+        Inspector inspector = new Inspector();
+
+        try {
+            inspector.inspect(dayOfWeek, true);
+        } catch (Exception e) {
+            fail("Exception thrown during inspection: " + e.getMessage());
+        }
+
+        // Add specific assertions for the enum
+        assertEquals("java.time.DayOfWeek", inspector.getClass().getName());
     }
 }
