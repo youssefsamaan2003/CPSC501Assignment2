@@ -4,18 +4,18 @@ import java.util.Arrays;
 public class Inspector {
 
     public void inspect(Object obj, boolean recursive) {
-        Class<?> clazz = obj.getClass();
+        Class<?> objClass = obj.getClass();
         // 1. The name of the declaring class
-        System.out.println("Declaring Class: " + clazz.getName());
+        System.out.println("Declaring Class: " + objClass.getName());
 
         // 2. The name of the immediate superclass
-        Class<?> superClass = clazz.getSuperclass();
+        Class<?> superClass = objClass.getSuperclass();
         if (superClass != null) {
             System.out.println("Immediate Superclass: " + superClass.getName());
         }
 
         // 3. The name of the interfaces the class implements
-        Class<?>[] interfaces = clazz.getInterfaces();
+        Class<?>[] interfaces = objClass.getInterfaces();
         if (interfaces.length > 0) {
             System.out.println("Implemented Interfaces:");
             for (Class<?> intf : interfaces) {
@@ -24,7 +24,7 @@ public class Inspector {
         }
 
         // 4. The methods the class declares
-        Method[] methods = clazz.getDeclaredMethods();
+        Method[] methods = objClass.getDeclaredMethods();
         if (methods.length > 0) {
             System.out.println("Declared Methods:");
             for (Method method : methods) {
@@ -38,7 +38,7 @@ public class Inspector {
         }
 
         // 5. The constructors the class declares
-        Constructor<?>[] constructors = clazz.getDeclaredConstructors();
+        Constructor<?>[] constructors = objClass.getDeclaredConstructors();
         if (constructors.length > 0) {
             System.out.println("Declared Constructors:");
             for (Constructor<?> constructor : constructors) {
@@ -48,7 +48,7 @@ public class Inspector {
         }
 
         // 6. The fields the class declares
-        Field[] fields = clazz.getDeclaredFields();
+        Field[] fields = objClass.getDeclaredFields();
         if (fields.length > 0) {
             System.out.println("Declared Fields:");
             for (Field field : fields) {
@@ -89,8 +89,8 @@ public class Inspector {
                 System.out.println();
             }
         }
-        if (clazz.isArray()) {
-            System.out.println("Array Component Type: " + clazz.getComponentType().getName());
+        if (objClass.isArray()) {
+            System.out.println("Array Component Type: " + objClass.getComponentType().getName());
             System.out.println("Array Length: " + Array.getLength(obj));
             System.out.println("Array Contents: " + Arrays.toString((Object[]) obj));
         }
