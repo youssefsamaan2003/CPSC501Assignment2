@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85db8f0c-c988-4c7c-a441-2ba368fad57a" name="Changes" comment="created tests - testInspectComplexObject(), testInspectRecursive(), testInspectSimpleObject()">
+    <list default="true" id="85db8f0c-c988-4c7c-a441-2ba368fad57a" name="Changes" comment="updated the recursive part">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697748474943</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="updated the recursive part">
+      <created>1697822291158</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1697822291159</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,6 +129,7 @@
     <MESSAGE value="completed 6th requirement - which is the fields that the class declares" />
     <MESSAGE value="created tests" />
     <MESSAGE value="created tests - testInspectComplexObject(), testInspectRecursive(), testInspectSimpleObject()" />
-    <option name="LAST_COMMIT_MESSAGE" value="created tests - testInspectComplexObject(), testInspectRecursive(), testInspectSimpleObject()" />
+    <MESSAGE value="updated the recursive part" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated the recursive part" />
   </component>
 </project>

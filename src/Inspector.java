@@ -89,6 +89,11 @@ public class Inspector {
                 System.out.println();
             }
         }
+        if (clazz.isArray()) {
+            System.out.println("Array Component Type: " + clazz.getComponentType().getName());
+            System.out.println("Array Length: " + Array.getLength(obj));
+            System.out.println("Array Contents: " + Arrays.toString((Object[]) obj));
+        }
 
     }
 }
